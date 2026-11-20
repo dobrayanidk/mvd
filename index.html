@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b18">
+<meta name="description" content="CHIVAS CITY — XIMENA EDITION. Una edición especial, una historia que sigue escribiéndose.">
+<title>CHIVAS CITY — XIMENA EDITION</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+:root{--bg:#070a14;--panel:#101629;--panel2:#151d34;--red:#e5263f;--white:#f5f7fb;--muted:#a8b0c5;--pink:#ff4e9b;--purple:#9366ff;--line:rgba(255,255,255,.12);--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 12% 20%,rgba(229,38,63,.12),transparent 35%),radial-gradient(ellipse at 85% 55%,rgba(147,102,255,.12),transparent 38%),linear-gradient(135deg,#070a14,#0b1020 55%,#080b17)}
+a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.eyebrow{display:flex;align-items:center;gap:10px;color:#ff789b;font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700}.eyebrow:before{content:"";width:28px;height:1px;background:var(--pink);box-shadow:0 0 12px var(--pink)}h1,h2,h3,p{margin-top:0}.display{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.015em}h2.section-title{font:800 clamp(2.8rem,7vw,5.3rem)/.9 'Barlow Condensed',sans-serif;text-transform:uppercase;margin:16px 0 20px;letter-spacing:-.02em}h2.section-title span{color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.72)}.section-intro{color:var(--muted);line-height:1.8;max-width:610px}.section{padding:112px 0;position:relative}.topbar{position:fixed;z-index:20;top:0;left:0;width:100%;padding:17px 0;border-bottom:1px solid transparent;transition:.35s}.topbar.scrolled{background:rgba(7,10,20,.78);backdrop-filter:blur(18px);border-color:var(--line)}.nav{display:flex;align-items:center;justify-content:space-between}.brand{font:800 1.25rem 'Barlow Condensed',sans-serif;letter-spacing:.08em}.brand b{color:var(--red)}.navlinks{display:flex;gap:25px;color:#c2c8d7;font-size:.78rem}.navlinks a{transition:.25s}.navlinks a:hover{color:white}.nav-cta{border:1px solid rgba(255,255,255,.25);padding:10px 16px;border-radius:3px;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase}
+.hero{min-height:790px;height:100svh;max-height:1000px;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(90deg,rgba(5,8,18,.94),rgba(5,8,18,.48) 55%,rgba(5,8,18,.35)),linear-gradient(0deg,#070a14 0%,transparent 28%),url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=2200&q=85') center/cover}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 42%,rgba(255,87,151,.24),transparent 35%),linear-gradient(120deg,transparent 40%,rgba(104,89,255,.15));mix-blend-mode:screen}.hero-grid{position:absolute;inset:0;z-index:-1;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(90deg,black,transparent 80%)}.hero-content{padding-top:72px;max-width:800px}.edition{font-size:.78rem;letter-spacing:.34em;color:#ff8aa8;text-transform:uppercase;font-weight:700}.hero h1{font:900 clamp(5rem,13vw,11rem)/.78 'Barlow Condensed',sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin:25px 0 14px;text-shadow:0 12px 50px rgba(0,0,0,.45)}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.88)}.hero-sub{font:700 clamp(1rem,2vw,1.45rem) 'Barlow Condensed',sans-serif;letter-spacing:.42em;color:#ff668f}.hero-copy{max-width:530px;margin:26px 0 34px;color:#d4d8e3;line-height:1.85;font-size:1rem}.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 23px;background:linear-gradient(100deg,#c91935,#ef3e62 60%,#a32b82);color:white;border:1px solid rgba(255,255,255,.22);border-radius:3px;font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;box-shadow:0 10px 35px rgba(229,38,63,.25);transition:.3s;cursor:pointer}.btn:hover{transform:translateY(-4px);box-shadow:0 16px 45px rgba(229,38,63,.4)}.btn .arrow{font-size:1.2rem}.hero-meta{position:absolute;bottom:34px;left:0;right:0;display:flex;justify-content:space-between;color:rgba(255,255,255,.58);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase}.hero-meta strong{color:white}.hero-orb{position:absolute;width:420px;height:420px;right:8%;top:22%;border-radius:50%;border:1px solid rgba(255,255,255,.16);box-shadow:0 0 100px rgba(255,65,128,.12),inset 0 0 90px rgba(120,88,255,.12);pointer-events:none}.hero-orb:before,.hero-orb:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.1);border-radius:50%;inset:35px}.hero-orb:after{inset:75px;border-color:rgba(255,80,145,.18)}
+.story-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:9%;align-items:center}.story-mark{min-height:390px;position:relative;border:1px solid var(--line);background:linear-gradient(145deg,rgba(229,38,63,.2),rgba(147,102,255,.12)),url('fotos/ximena-brayan-01.jpg') center/cover;overflow:hidden}.story-mark:after{content:"CH / X";position:absolute;bottom:18px;left:22px;font:900 4rem 'Barlow Condensed';color:rgba(255,255,255,.78);text-shadow:0 5px 30px #000}.story-mark .corner{position:absolute;top:18px;right:18px;border:1px solid rgba(255,255,255,.5);padding:8px 11px;font-size:.62rem;letter-spacing:.16em;background:rgba(0,0,0,.3);backdrop-filter:blur(10px)}.story-text{font-size:clamp(1.05rem,2vw,1.28rem);line-height:2;color:#d9deea}.story-text strong{color:white;font-weight:600}
+.gallery-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}.gallery-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:230px 230px;gap:14px}.photo-card{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(135deg,rgba(229,38,63,.3),rgba(147,102,255,.2)),#151b2b;min-height:190px}.photo-card:first-child{grid-row:span 2}.photo-card:nth-child(4){grid-column:span 2}.photo-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s;filter:saturate(.82)}.photo-card:hover img{transform:scale(1.07);filter:saturate(1.15)}.photo-card:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(4,7,15,.75));pointer-events:none}.photo-label{position:absolute;z-index:1;bottom:16px;left:18px;font-size:.68rem;letter-spacing:.17em;text-transform:uppercase}.gallery-note{text-align:center;color:#cbd0de;font:600 clamp(1.2rem,2.5vw,1.8rem)/1.5 'Barlow Condensed';letter-spacing:.04em;margin:38px auto 0}.gallery-note span{color:var(--pink)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}.glass-card{background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border:1px solid var(--line);backdrop-filter:blur(14px);padding:28px 23px;min-height:225px;position:relative;overflow:hidden;transition:.35s}.glass-card:before{content:"";position:absolute;inset:0 auto 0 0;width:2px;background:linear-gradient(var(--pink),var(--purple));opacity:.7}.glass-card:hover{transform:translateY(-8px);border-color:rgba(255,105,160,.4);box-shadow:0 20px 45px rgba(0,0,0,.25)}.card-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,111,163,.4);color:#ff7da9;font-size:1.2rem;margin-bottom:25px}.glass-card h3{font:700 1.45rem 'Barlow Condensed';text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px}.glass-card p{color:var(--muted);line-height:1.7;font-size:.88rem;margin:0}
+.future{background:linear-gradient(115deg,rgba(229,38,63,.12),transparent 45%,rgba(147,102,255,.13));border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}.future:before{content:"";position:absolute;width:600px;height:600px;border:1px solid rgba(255,255,255,.08);border-radius:50%;right:-230px;top:0;box-shadow:0 0 0 55px rgba(255,255,255,.018),0 0 0 110px rgba(255,255,255,.014)}.future-layout{display:grid;grid-template-columns:1fr .9fr;gap:8%;align-items:center;position:relative}.future-copy{font-size:1.06rem;line-height:1.9;color:#d2d7e4}.future-copy em{font-style:normal;color:white;font-weight:700}.checklist{border:1px solid var(--line);background:rgba(8,12,25,.65);backdrop-filter:blur(15px);padding:30px}.checklist-head{font:700 .7rem 'DM Sans';letter-spacing:.2em;color:#ff7ca5;margin-bottom:22px}.check{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#e5e8f0;font-size:.9rem}.check:last-child{border:0}.check i{font-style:normal;width:22px;height:22px;border:1px solid rgba(255,93,151,.6);display:grid;place-items:center;color:#ff6c9c;font-size:.75rem}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;margin-top:40px}.stats-panel{padding:30px;border:1px solid var(--line);background:rgba(255,255,255,.035)}.stat{margin-bottom:24px}.stat:last-child{margin-bottom:0}.stat-top{display:flex;justify-content:space-between;text-transform:uppercase;font-size:.72rem;letter-spacing:.1em;margin-bottom:9px}.stat-top b{color:#ff83a8}.bar{height:5px;background:rgba(255,255,255,.1);overflow:hidden}.bar span{display:block;width:0;height:100%;background:linear-gradient(90deg,var(--red),var(--pink),var(--purple));box-shadow:0 0 14px rgba(255,78,155,.7);transition:width 1.5s cubic-bezier(.2,.7,.2,1)}.level-card{text-align:center;padding:36px 20px;position:relative}.level-ring{width:210px;height:210px;margin:0 auto 24px;border-radius:50%;border:1px solid rgba(255,103,158,.5);display:grid;place-items:center;box-shadow:0 0 70px rgba(229,38,63,.13),inset 0 0 50px rgba(147,102,255,.12);position:relative}.level-ring:before,.level-ring:after{content:"";position:absolute;inset:12px;border:1px dashed rgba(255,255,255,.25);border-radius:50%}.level-ring:after{inset:-9px;border-color:rgba(147,102,255,.25)}.level-ring strong{font:900 2.4rem 'Barlow Condensed';color:#ff6d9c}.level-card h3{font:800 2rem 'Barlow Condensed';letter-spacing:.12em;margin-bottom:8px}.level-card p{color:var(--muted);font-size:.75rem;letter-spacing:.18em}
+.achievements{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:38px}.achievement{padding:25px 14px;text-align:center;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));transition:.3s}.achievement:hover{transform:translateY(-6px);border-color:rgba(255,197,92,.4)}.trophy{font-size:1.8rem;filter:drop-shadow(0 0 12px rgba(255,184,71,.35));margin-bottom:17px}.achievement h3{font:700 1.1rem 'Barlow Condensed';text-transform:uppercase;line-height:1.1;margin:0}.achievement small{display:block;color:var(--muted);font-size:.62rem;letter-spacing:.12em;margin-top:12px}
+.letter-wrap{max-width:850px;margin:auto;position:relative}.letter{padding:clamp(30px,6vw,70px);background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.16);box-shadow:0 30px 100px rgba(0,0,0,.25);position:relative}.letter:before{content:"";position:absolute;top:0;left:0;width:90px;height:2px;background:linear-gradient(90deg,var(--pink),transparent)}.letter h2{font:800 clamp(2.7rem,6vw,4.7rem)/.9 'Barlow Condensed';text-transform:uppercase;margin-bottom:35px}.letter p{color:#d7dbe6;line-height:2;font-size:1rem}.signature{font:700 2rem 'Barlow Condensed';color:#ff7da5;margin-top:30px}
+footer{padding:75px 0 38px;text-align:center;background:linear-gradient(0deg,rgba(229,38,63,.1),transparent)}.footer-label{font-size:.68rem;letter-spacing:.25em;color:var(--muted)}.infinity{font:900 clamp(3.4rem,9vw,7rem)/1 'Barlow Condensed';margin:12px 0 28px}.next-label{color:#ff7ca5;font-size:.68rem;letter-spacing:.25em}.next-word{font:900 clamp(3.2rem,9vw,6.8rem)/.9 'Barlow Condensed';text-transform:uppercase;margin:12px 0 30px;text-shadow:0 0 40px rgba(255,78,155,.25)}.footer-bottom{border-top:1px solid var(--line);padding-top:22px;color:#788198;font-size:.68rem;letter-spacing:.1em}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}.delay-1{transition-delay:.12s}.delay-2{transition-delay:.24s}.delay-3{transition-delay:.36s}.scroll-indicator{position:absolute;right:30px;top:50%;writing-mode:vertical-rl;color:rgba(255,255,255,.5);font-size:.6rem;letter-spacing:.25em}.scroll-indicator:after{content:"";display:inline-block;width:1px;height:55px;background:linear-gradient(transparent,var(--pink));margin-top:12px}
+@media(max-width:900px){.navlinks{display:none}.hero-orb{right:-180px;opacity:.5}.story-layout,.future-layout{grid-template-columns:1fr;gap:38px}.story-mark{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.achievements{grid-template-columns:repeat(3,1fr)}.gallery-grid{grid-template-rows:190px 190px}.stats-grid{gap:20px}}
+@media(max-width:600px){.wrap{width:min(100% - 32px,var(--max))}.section{padding:78px 0}.hero{min-height:720px;background-position:58% center}.hero h1{font-size:clamp(4.5rem,22vw,7rem)}.hero-content{padding-top:45px}.hero-meta{font-size:.55rem;bottom:20px}.hero-meta span:last-child{display:none}.hero-orb{width:260px;height:260px;top:17%;right:-150px}.scroll-indicator{display:none}.gallery-head{display:block}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 150px 150px}.photo-card:first-child{grid-row:span 2}.photo-card:nth-child(4){grid-column:span 2}.cards{grid-template-columns:1fr 1fr;gap:9px}.glass-card{padding:21px 16px;min-height:210px}.glass-card h3{font-size:1.2rem}.stats-grid{grid-template-columns:1fr}.achievements{grid-template-columns:repeat(2,1fr)}.achievement:last-child{grid-column:span 2}.checklist{padding:22px 18px}.letter{padding:30px 22px}.letter p{font-size:.93rem}.topbar{padding:13px 0}.nav-cta{padding:9px 11px;font-size:.62rem}.brand{font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header class="topbar" id="topbar"><div class="wrap nav">
+<a class="brand" href="#inicio">CHIVAS <b>CITY</b></a>
+<nav class="navlinks"><a href="#historia">HISTORIA</a><a href="#galeria">MOMENTOS</a><a href="#misiones">FUTURO</a><a href="#jugadora">ESTADÍSTICAS</a></nav>
+<a class="nav-cta" href="#carta">EDICIÓN XIMENA</a>
+</div></header>
+<main>
+<section class="hero" id="inicio">
+<div class="hero-grid"></div><div class="hero-orb" data-parallax></div>
+<div class="wrap hero-content reveal visible">
+<div class="edition">Una edición especial · Colección privada</div>
+<h1>CHIVAS <span>CITY</span></h1>
+<div class="hero-sub">XIMENA EDITION</div>
+<p class="hero-copy">No se trata de encontrar una historia perfecta.<br>Se trata de construir una historia que valga la pena recordar.</p>
+<a class="btn" href="#historia">COMENZAR AVENTURA <span class="arrow">↗</span></a>
+</div>
+<div class="wrap hero-meta"><span><strong>PLAYER 01</strong> — XIMENA</span><span>GUADALAJARA · MÉXICO</span><span>EDICIÓN COLECCIONISTA <strong>01/01</strong></span></div>
+<div class="scroll-indicator">DESLIZA PARA EXPLORAR</div>
+</section>
+<section class="section" id="historia"><div class="wrap story-layout">
+<div class="story-mark reveal"><span class="corner">ARCHIVO 001 / NOSOTROS</span></div>
+<div class="reveal delay-1"><div class="eyebrow">01 — Nuestra historia</div><h2 class="section-title">UNA HISTORIA<br><span>QUE SE ESCRIBE</span></h2>
+<p class="story-text">Entre todas las coincidencias de la vida,<br><strong>mi favorita fue encontrarte.</strong><br><br>Lo más bonito no son los momentos extraordinarios.<br><br>Son las conversaciones,<br>las risas,<br>las fotografías,<br>los planes improvisados<br>y todo lo que hemos construido poco a poco.</p></div>
+</div></section>
+<section class="section" id="galeria"><div class="wrap">
+<div class="gallery-head reveal"><div><div class="eyebrow">02 — Archivo de recuerdos</div><h2 class="section-title">GALERÍA DE <span>MOMENTOS</span></h2></div><p class="section-intro">Cada imagen guarda una parte de todo lo que hemos vivido. Este espacio está listo para nuestras fotografías favoritas.</p></div>
+<div class="gallery-grid">
+<div class="photo-card reveal"><img src="fotos/ximena-brayan-01.jpg" alt="Un recuerdo de Ximena y Brayan" onerror="this.style.display='none'"><span class="photo-label">RECUERDO / 001</span></div>
+<div class="photo-card reveal delay-1"><img src="fotos/ximena-02.jpg" alt="Fotografía de Ximena" onerror="this.style.display='none'"><span class="photo-label">RECUERDO / 002</span></div>
+<div class="photo-card reveal delay-2"><img src="fotos/brayan-03.jpg" alt="Fotografía de Brayan" onerror="this.style.display='none'"><span class="photo-label">RECUERDO / 003</span></div>
+<div class="photo-card reveal delay-1"><img src="fotos/ximena-brayan-04.jpg" alt="Otro recuerdo juntos" onerror="this.style.display='none'"><span class="photo-label">RECUERDO / 004</span></div>
+</div>
+<p class="gallery-note reveal">No son solo fotografías.<br><span>Son pequeños capítulos de una historia</span><br>que todavía sigue escribiéndose.</p>
+</div></section>
+<section class="section" id="admiro"><div class="wrap">
+<div class="eyebrow reveal">03 — Detalles que cuentan</div><h2 class="section-title reveal">LO QUE MÁS <span>ADMIRO DE TI</span></h2>
+<div class="cards">
+<article class="glass-card reveal"><div class="card-icon">✦</div><h3>Tu forma de ser</h3><p>Porque haces especial cualquier momento.</p></article>
+<article class="glass-card reveal delay-1"><div class="card-icon">↗</div><h3>Tu pasión</h3><p>Porque cuando algo te importa, siempre das lo mejor de ti.</p></article>
+<article class="glass-card reveal delay-2"><div class="card-icon">◎</div><h3>Tu compañía</h3><p>Porque contigo los días tienen algo diferente.</p></article>
+<article class="glass-card reveal delay-3"><div class="card-icon">♡</div><h3>Tu sonrisa</h3><p>Porque mejora cualquier lugar donde estés.</p></article>
+</div></div></section>
+<section class="section future" id="misiones"><div class="wrap future-layout">
+<div class="reveal"><div class="eyebrow">04 — Misión futura</div><h2 class="section-title">LO QUE QUIERO<br><span>CONSTRUIR CONTIGO</span></h2>
+<p class="future-copy">No sueño con una vida perfecta.<br><br>Sueño con <em>más fotografías.</em><br>Más metas cumplidas.<br>Más recuerdos.<br>Más historias que algún día podamos mirar atrás y decir:<br><em>Valió la pena cada paso.</em></p></div>
+<div class="checklist reveal delay-1"><div class="checklist-head">OBJETIVOS DE LA SIGUIENTE TEMPORADA</div>
+<div class="check"><i>✓</i> Ver más partidos juntos</div><div class="check"><i>✓</i> Conocer nuevos lugares</div><div class="check"><i>✓</i> Alcanzar metas importantes</div><div class="check"><i>✓</i> Crear más recuerdos</div><div class="check"><i>✓</i> Seguir creciendo juntos</div><div class="check"><i>✓</i> Disfrutar cada etapa de la vida</div>
+</div></div></section>
+<section class="section" id="jugadora"><div class="wrap"><div class="eyebrow reveal">05 — Perfil de jugadora</div><h2 class="section-title reveal">ESTADÍSTICAS <span>DE LEYENDA</span></h2>
+<div class="stats-grid"><div class="stats-panel reveal">
+<div class="stat"><div class="stat-top"><span>Pasión</span><b>100%</b></div><div class="bar"><span data-width="100%"></span></div></div>
+<div class="stat"><div class="stat-top"><span>Lealtad</span><b>100%</b></div><div class="bar"><span data-width="100%"></span></div></div>
+<div class="stat"><div class="stat-top"><span>Orgullo rojiblanco</span><b>100%</b></div><div class="bar"><span data-width="100%"></span></div></div>
+<div class="stat"><div class="stat-top"><span>Carisma</span><b>100%</b></div><div class="bar"><span data-width="100%"></span></div></div>
+</div><div class="level-card reveal delay-1"><div class="level-ring"><strong>LV. ∞</strong></div><h3>LEYENDA</h3><p>FAN LEVEL · XIMENA EDITION</p></div></div>
+</div></section>
+<section class="section" id="logros"><div class="wrap"><div class="eyebrow reveal">06 — Colección de logros</div><h2 class="section-title reveal">LOGROS <span>DESBLOQUEADOS</span></h2>
+<div class="achievements">
+<div class="achievement reveal"><div class="trophy">🏆</div><h3>Fan legendaria</h3><small>LOGRO 001</small></div>
+<div class="achievement reveal delay-1"><div class="trophy">🏆</div><h3>Corazón rojiblanco</h3><small>LOGRO 002</small></div>
+<div class="achievement reveal delay-2"><div class="trophy">🏆</div><h3>MVP de Chivas City</h3><small>LOGRO 003</small></div>
+<div class="achievement reveal delay-3"><div class="trophy">🏆</div><h3>Protagonista de esta historia</h3><small>LOGRO 004</small></div>
+<div class="achievement reveal"><div class="trophy">🏆</div><h3>Compañera de aventuras</h3><small>LOGRO 005</small></div>
+</div></div></section>
+<section class="section" id="carta"><div class="wrap letter-wrap"><div class="letter reveal">
+<div class="eyebrow">07 — Mensaje personal / Solo para ti</div><h2>UNA CARTA<br><span>PARA XIMENA</span></h2>
+<p>Ximena:</p>
+
+<p>La verdad, hice todo esto porque quería tener un detalle diferente contigo.</p>
+
+<p>Me gusta pasar tiempo contigo, hablar de cualquier cosa, reírnos y todos esos momentos que a veces parecen simples, pero que para mí significan mucho.</p>
+
+<p>No sé qué vaya a pasar más adelante, pero sí sé que quiero seguir compartiendo momentos contigo, salir, conocer lugares y tener muchas más experiencias juntos.</p>
+
+<p>Y bueno, espero que te guste este pequeño detalle que hice pensando en ti.</p>
+
+<div class="signature">
+    Brayan ❤️
+</div>
+<footer><div class="wrap"><div class="footer-label">CHIVAS CITY · XIMENA EDITION</div><div class="infinity">CAPÍTULOS COMPLETADOS: ∞</div><div class="next-label">PRÓXIMO CAPÍTULO:</div><div class="next-word">JUNTOS.</div><div class="footer-bottom">UNA EDICIÓN ESPECIAL · CREADA POR BRAYAN · GUADALAJARA, MÉXICO</div></div></footer>
+<script>
+const topbar=document.getElementById('topbar');
+window.addEventListener('scroll',()=>{topbar.classList.toggle('scrolled',window.scrollY>30);const orb=document.querySelector('[data-parallax]');if(orb&&window.innerWidth>700)orb.style.transform=`translate3d(0,${window.scrollY*.12}px,0)`},{passive:true});
+const observer=new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.querySelectorAll('.bar span').forEach(bar=>bar.style.width=bar.dataset.width||'100%');obs.unobserve(entry.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el));
+document.querySelectorAll('.stats-panel').forEach(el=>observer.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{const target=document.querySelector(link.getAttribute('href'));if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'})}}));
+</script>
+</body>
+</html>
