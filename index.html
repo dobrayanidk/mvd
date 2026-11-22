@@ -25,9 +25,121 @@ footer{padding:75px 0 38px;text-align:center;background:linear-gradient(0deg,rgb
 @media(max-width:900px){.navlinks{display:none}.hero-orb{right:-180px;opacity:.5}.story-layout,.future-layout{grid-template-columns:1fr;gap:38px}.story-mark{min-height:300px}.cards{grid-template-columns:repeat(2,1fr)}.achievements{grid-template-columns:repeat(3,1fr)}.gallery-grid{grid-template-rows:190px 190px}.stats-grid{gap:20px}}
 @media(max-width:600px){.wrap{width:min(100% - 32px,var(--max))}.section{padding:78px 0}.hero{min-height:720px;background-position:58% center}.hero h1{font-size:clamp(4.5rem,22vw,7rem)}.hero-content{padding-top:45px}.hero-meta{font-size:.55rem;bottom:20px}.hero-meta span:last-child{display:none}.hero-orb{width:260px;height:260px;top:17%;right:-150px}.scroll-indicator{display:none}.gallery-head{display:block}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:220px 150px 150px}.photo-card:first-child{grid-row:span 2}.photo-card:nth-child(4){grid-column:span 2}.cards{grid-template-columns:1fr 1fr;gap:9px}.glass-card{padding:21px 16px;min-height:210px}.glass-card h3{font-size:1.2rem}.stats-grid{grid-template-columns:1fr}.achievements{grid-template-columns:repeat(2,1fr)}.achievement:last-child{grid-column:span 2}.checklist{padding:22px 18px}.letter{padding:30px 22px}.letter p{font-size:.93rem}.topbar{padding:13px 0}.nav-cta{padding:9px 11px;font-size:.62rem}.brand{font-size:1.1rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* CINEMATIC COLLECTOR EDITION INTRO */
+body.site-loading{overflow:hidden}
+#collector-intro{position:fixed;inset:0;z-index:99999;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,2vh,24px);padding:22px;background:radial-gradient(ellipse at 50% 48%,rgba(92,40,119,.34),transparent 42%),radial-gradient(ellipse at 14% 18%,rgba(229,38,63,.24),transparent 36%),linear-gradient(145deg,#050711,#11152a 54%,#080914);color:#fff;transition:opacity 1s ease,visibility 1s ease}
+#collector-intro:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse,black,transparent 80%)}
+#collector-intro.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.cinema-vignette{position:absolute;inset:-15%;pointer-events:none;background:radial-gradient(ellipse,transparent 42%,rgba(0,0,0,.72) 100%)}
+.particle-field{position:absolute;inset:0;pointer-events:none;overflow:hidden;background-image:radial-gradient(2px 2px at 12% 24%,rgba(255,255,255,.8) 50%,transparent 60%),radial-gradient(1px 1px at 80% 19%,rgba(255,126,190,.9) 50%,transparent 60%),radial-gradient(2px 2px at 68% 78%,rgba(255,255,255,.65) 50%,transparent 60%),radial-gradient(1px 1px at 29% 82%,rgba(163,143,255,.9) 50%,transparent 60%),radial-gradient(1px 1px at 92% 55%,rgba(255,255,255,.7) 50%,transparent 60%);animation:particle-drift 9s ease-in-out infinite alternate}
+@keyframes particle-drift{from{transform:translate3d(-8px,8px,0);opacity:.55}to{transform:translate3d(10px,-12px,0);opacity:1}}
+.intro-brand{position:relative;z-index:3;text-align:center;text-shadow:0 4px 30px rgba(0,0,0,.6);margin-top:1vh}
+.brand-kicker{font-size:.62rem;letter-spacing:.34em;color:#ff91b4;font-weight:800}
+.intro-brand h1{font:900 clamp(2rem,5vw,3.7rem)/.9 'Barlow Condensed',sans-serif;letter-spacing:.06em;margin:10px 0 5px}
+.intro-brand h1 em{font-style:normal;color:#ff365d}
+.intro-brand p{margin:0;color:#d7d8e8;font-size:.72rem;letter-spacing:.38em;font-weight:800}
+.case-stage{position:relative;z-index:2;width:min(82vw,340px);height:min(48vh,440px);min-height:245px;perspective:1600px;display:grid;place-items:center;filter:drop-shadow(0 24px 36px rgba(0,0,0,.58))}
+.dvd-case{position:relative;width:100%;height:100%;transform-style:preserve-3d;transform:rotateY(-8deg) rotateX(2deg);transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.case-inside{position:absolute;inset:0;border-radius:9px;background:#101526;border:2px solid rgba(230,236,255,.7);overflow:hidden;box-shadow:inset 0 0 0 5px rgba(0,0,0,.38),0 0 0 1px rgba(255,255,255,.22);transform:translateZ(-5px)}
+.inside-art{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.08) contrast(1.05)}
+.case-front{position:absolute;inset:0;border-radius:9px;overflow:hidden;transform-origin:left center;transform:translateZ(7px);transform-style:preserve-3d;transition:transform 1.7s cubic-bezier(.18,.78,.18,1);backface-visibility:hidden;border:2px solid rgba(255,255,255,.78);box-shadow:inset 0 0 0 5px rgba(0,0,0,.3),0 0 30px rgba(255,54,117,.25)}
+.cover-art{width:100%;height:100%;object-fit:cover;display:block}
+.case-gloss{position:absolute;inset:0;pointer-events:none;background:linear-gradient(112deg,rgba(255,255,255,.32),transparent 22%,transparent 68%,rgba(255,255,255,.12)),linear-gradient(0deg,rgba(0,0,0,.2),transparent 35%)}
+.case-front-copy{position:absolute;left:8%;right:8%;bottom:8%;display:flex;flex-direction:column;align-items:flex-start;text-shadow:0 3px 15px #000}
+.case-front-copy span{font-size:.48rem;letter-spacing:.2em;font-weight:900}
+.case-front-copy strong{font:900 clamp(1.5rem,5vw,2.35rem)/.9 'Barlow Condensed',sans-serif;letter-spacing:.02em}
+.case-front-copy b{font-size:.64rem;letter-spacing:.23em;color:#ffb1cb}
+.case-rating{position:absolute;right:8px;top:8px;padding:5px 7px;border:1px solid rgba(255,255,255,.8);background:rgba(5,8,18,.72);font-size:.42rem;letter-spacing:.1em;text-align:center;font-weight:900}
+.case-back-edge{position:absolute;left:-9px;top:3px;bottom:3px;width:10px;background:linear-gradient(90deg,#070a14,#e2e5f1,#4b5268);transform:translateZ(-1px);border-radius:4px 0 0 4px}
+.disc-tray{position:absolute;width:73%;aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#252d44 0 47%,#080d1c 48% 51%,#343b50 52% 55%,#101526 56%);box-shadow:0 0 0 5px rgba(0,0,0,.5),inset 0 0 20px #000}
+.disc-shadow{position:absolute;inset:7%;border-radius:50%;box-shadow:0 0 25px rgba(0,0,0,.8)}
+.collector-disc{position:relative;width:88%;height:88%;border-radius:50%;object-fit:cover;border:5px solid #c6cad6;box-shadow:0 0 0 2px #242b40,0 0 28px rgba(255,70,145,.45);opacity:0;transform:scale(.82) rotate(-20deg);transition:opacity .8s ease,transform 1s cubic-bezier(.2,.8,.2,1)}
+.disc-hub{position:absolute;width:13%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#050812 0 25%,#c9cedd 28% 40%,#20283c 43% 100%);border:2px solid rgba(255,255,255,.8);opacity:0;transition:opacity .5s}
+#collector-intro.case-open .case-front{transform:translateZ(7px) rotateY(-145deg)}
+#collector-intro.case-open .dvd-case{transform:rotateY(0) rotateX(0)}
+#collector-intro.disc-ready .collector-disc{opacity:1;transform:scale(1) rotate(0deg);animation:collector-spin 14s linear infinite}
+#collector-intro.disc-ready .disc-hub{opacity:1}
+@keyframes collector-spin{to{transform:scale(1) rotate(360deg)}}
+.intro-instruction{position:relative;z-index:3;display:flex;align-items:center;gap:12px;color:#f6d8e4;font-size:.61rem;letter-spacing:.19em;font-weight:800;text-align:center;transition:opacity .4s,transform .4s}
+.instruction-line{width:clamp(20px,7vw,70px);height:1px;background:linear-gradient(90deg,transparent,#ff6b9d)}
+.instruction-line:last-child{transform:rotate(180deg)}
+.open-edition{position:relative;z-index:4;border:1px solid rgba(255,117,166,.8);border-radius:2px;padding:13px 24px;background:linear-gradient(100deg,#b81136,#f02c66);color:white;font:800 .68rem 'DM Sans',sans-serif;letter-spacing:.18em;box-shadow:0 0 25px rgba(255,38,106,.28);cursor:pointer;transition:transform .25s,box-shadow .25s}
+.open-edition:hover{transform:translateY(-3px);box-shadow:0 0 35px rgba(255,38,106,.55)}
+.open-edition span{margin-left:15px;font-size:1rem}
+#collector-intro.opening .intro-instruction,#collector-intro.opening .open-edition{opacity:0;transform:translateY(12px);pointer-events:none}
+.loading-ui{position:relative;z-index:3;width:min(88vw,440px);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .7s,transform .7s}
+#collector-intro.loading .loading-ui{opacity:1;transform:none}
+.loading-topline,.loading-meta{display:flex;justify-content:space-between;gap:12px;color:#8e9ab6;font-size:.52rem;letter-spacing:.17em;font-weight:800}
+.loading-message{margin:12px 0;color:#fff;font-size:.88rem;font-weight:700;letter-spacing:.04em;min-height:22px;text-shadow:0 0 18px rgba(255,87,151,.5)}
+.loading-track{height:4px;background:rgba(255,255,255,.15);overflow:hidden}
+#loading-fill{display:block;width:0;height:100%;background:linear-gradient(90deg,#e5263f,#ff4e9b,#a27aff);box-shadow:0 0 18px #ff4e9b;transition:width .15s linear}
+.loading-meta{margin-top:9px}.loading-meta strong{color:#fff;font-size:.7rem}
+.intro-footer{position:absolute;z-index:2;bottom:17px;color:rgba(255,255,255,.35);font-size:.48rem;letter-spacing:.23em;text-align:center}
+.intro-footer span{color:#ff4b83;margin-left:8px}
+.soft-flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;z-index:10}
+#collector-intro.complete .soft-flash{animation:soft-flash .85s ease-out}
+@keyframes soft-flash{0%{opacity:0}18%{opacity:.65}100%{opacity:0}}
+@media(max-width:520px){#collector-intro{gap:13px;padding:16px}.brand-kicker{font-size:.5rem}.case-stage{width:min(72vw,290px);height:min(43vh,370px);min-height:230px}.intro-brand h1{font-size:2.5rem}.intro-instruction{font-size:.49rem;letter-spacing:.12em}.open-edition{padding:12px 18px}.loading-ui{width:88vw}.intro-footer{font-size:.4rem}}
+@media(max-height:650px){#collector-intro{gap:7px}.intro-brand{margin-top:0}.intro-brand h1{font-size:2rem}.case-stage{height:40vh;min-height:190px;width:min(36vh,250px)}.open-edition{padding:9px 18px}.intro-footer{bottom:8px}}
+@media(prefers-reduced-motion:reduce){.particle-field{animation:none}*{scroll-behavior:auto!important}}
+
+body.intro-active > header, body.intro-active > main, body.intro-active > footer{visibility:hidden}
 </style>
 </head>
-<body>
+<body class="site-loading intro-active">
+
+<div id="collector-intro" aria-label="CHIVAS CITY Ximena Edition">
+  <div class="cinema-vignette"></div>
+  <div class="particle-field" aria-hidden="true"></div>
+  <div class="intro-brand">
+    <span class="brand-kicker">EDICIÓN DE COLECCIÓN · PLAYER 01</span>
+    <h1>CHIVAS <em>CITY</em></h1>
+    <p>XIMENA EDITION</p>
+  </div>
+
+  <div class="case-stage" id="case-stage">
+    <div class="dvd-case" id="dvd-case">
+      <div class="case-inside">
+        <img class="inside-art" id="inside-art" alt="Interior de la edición de colección">
+        <div class="disc-tray">
+          <div class="disc-shadow"></div>
+          <img class="collector-disc" id="collector-disc" alt="Disco CHIVAS CITY edición Ximena">
+          <div class="disc-hub"></div>
+        </div>
+        <div class="inside-spine">XIMENA EDITION · CHIVAS CITY</div>
+      </div>
+      <div class="case-front" id="case-front">
+        <img id="cover-art" class="cover-art" alt="Portada CHIVAS CITY Ximena Edition">
+        <div class="case-gloss"></div>
+        <div class="case-front-copy">
+          <span></span>
+          <strong></strong>
+          <b></b>
+        </div>
+       
+      </div>
+      <div class="case-back-edge"></div>
+    </div>
+  </div>
+
+  <div class="intro-instruction" id="intro-instruction">
+    <span class="instruction-line"></span>
+    <span>CLICK TO OPEN THE COLLECTOR EDITION</span>
+    <span class="instruction-line"></span>
+  </div>
+  <button class="open-edition" id="open-edition" type="button">ABRIR EDICIÓN <span>↗</span></button>
+
+  <div class="loading-ui" id="loading-ui" aria-live="polite">
+    <div class="loading-topline"><span>CHIVAS CITY SYSTEM</span><span>DISC 01 / XIMENA</span></div>
+    <div class="loading-message" id="loading-message">Initializing system...</div>
+    <div class="loading-track"><span id="loading-fill"></span></div>
+    <div class="loading-meta"><span>READING COLLECTOR DATA</span><strong id="loading-percent">0%</strong></div>
+  </div>
+  <div class="intro-footer">AN EXCLUSIVE DIGITAL COLLECTOR'S EDITION <span>♥</span></div>
+  <div class="soft-flash" id="soft-flash"></div>
+</div>
+
 <header class="topbar" id="topbar"><div class="wrap nav">
 <a class="brand" href="#inicio">CHIVAS <b>CITY</b></a>
 <nav class="navlinks"><a href="#historia">HISTORIA</a><a href="#galeria">MOMENTOS</a><a href="#misiones">FUTURO</a><a href="#jugadora">ESTADÍSTICAS</a></nav>
@@ -108,6 +220,60 @@ footer{padding:75px 0 38px;text-align:center;background:linear-gradient(0deg,rgb
 </div>
 <footer><div class="wrap"><div class="footer-label">CHIVAS CITY · XIMENA EDITION</div><div class="infinity">CAPÍTULOS COMPLETADOS: ∞</div><div class="next-label">PRÓXIMO CAPÍTULO:</div><div class="next-word">JUNTOS.</div><div class="footer-bottom">UNA EDICIÓN ESPECIAL · CREADA POR BRAYAN · GUADALAJARA, MÉXICO</div></div></footer>
 <script>
+
+// ===== CONFIGURACIÓN DE IMÁGENES: CAMBIA ESTAS RUTAS =====
+const COVER_IMAGE_PATH = "portada.png";
+const INSIDE_IMAGE_PATH = "adentro.png";
+const DISC_IMAGE_PATH = "dis.png";
+
+document.getElementById("cover-art").src = COVER_IMAGE_PATH;
+document.getElementById("inside-art").src = INSIDE_IMAGE_PATH;
+document.getElementById("collector-disc").src = DISC_IMAGE_PATH;
+
+// Secuencia cinematográfica: abrir caja -> revelar disco -> cargar -> entrar al sitio.
+(() => {
+  const intro = document.getElementById("collector-intro");
+  const openButton = document.getElementById("open-edition");
+  const fill = document.getElementById("loading-fill");
+  const percent = document.getElementById("loading-percent");
+  const message = document.getElementById("loading-message");
+  if (!intro || !openButton) return;
+
+  const messages = [
+    [0, "Initializing system..."],
+    [22, "Reading memories..."],
+    [48, "Loading adventures..."],
+    [74, "Preparing next chapter..."],
+    [100, "Welcome Ximena ❤️"]
+  ];
+
+  openButton.addEventListener("click", () => {
+    if (intro.classList.contains("opening")) return;
+    intro.classList.add("opening", "case-open");
+    setTimeout(() => {
+      intro.classList.add("disc-ready", "loading");
+      let progress = 0;
+      const timer = setInterval(() => {
+        progress = Math.min(100, progress + (progress < 70 ? 1 : 2));
+        fill.style.width = progress + "%";
+        percent.textContent = progress + "%";
+        const current = [...messages].reverse().find(item => progress >= item[0]);
+        if (current) message.textContent = current[1];
+
+        if (progress >= 100) {
+          clearInterval(timer);
+          intro.classList.add("complete");
+          setTimeout(() => {
+            intro.classList.add("is-hidden");
+            document.body.classList.remove("site-loading", "intro-active");
+            setTimeout(() => intro.remove(), 1100);
+          }, 850);
+        }
+      }, 48);
+    }, 1750);
+  });
+})();
+
 const topbar=document.getElementById('topbar');
 window.addEventListener('scroll',()=>{topbar.classList.toggle('scrolled',window.scrollY>30);const orb=document.querySelector('[data-parallax]');if(orb&&window.innerWidth>700)orb.style.transform=`translate3d(0,${window.scrollY*.12}px,0)`},{passive:true});
 const observer=new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');entry.target.querySelectorAll('.bar span').forEach(bar=>bar.style.width=bar.dataset.width||'100%');obs.unobserve(entry.target)}})},{threshold:.14});
